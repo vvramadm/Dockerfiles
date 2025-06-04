@@ -6,6 +6,7 @@ const con = mysql.createConnection({
     user: process.env.DB_USER || dbcreds.DB_USER,
     password: process.env.DB_PWD || dbcreds.DB_PWD,
     database: process.env.DB_DATABASE || dbcreds.DB_DATABASE
+    ssl: false
 });
 
 function addTransaction(amount,desc){
